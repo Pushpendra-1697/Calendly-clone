@@ -1,0 +1,29 @@
+{
+  "name": "calendly-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pushpendra-1697/Calendly-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pushpendra-1697/Calendly-clone/issues"
+  },
+  "homepage": "https://github.com/Pushpendra-1697/Calendly-clone#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.1",
+    "nodemon": "^2.0.22"
+  }
+}
