@@ -26,6 +26,8 @@
     "googleapis": "^118.0.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.1",
-    "nodemon": "^2.0.22"
+    "nodemailer": "^6.9.2",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
   }
 }

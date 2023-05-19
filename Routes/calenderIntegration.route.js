@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const dayjs = require('dayjs');
 const { google } = require('googleapis');
+const { v4 } = require('uuid'); // used for generate unique id;
 const calenderIntegrationRoute = Router();
 const calender = google.calendar({
     version: 'v3',
@@ -54,8 +55,15 @@ calenderIntegrationRoute.get('/schedule_event', async (req, res) => {
                 timeZone: 'Asia/Kolkata'
             },
             conferenceData: {
-                
-            }
+                createRequest: {
+                    requestId: v4()
+                }
+            },
+            attendees: [
+                {
+                    email: 'pushpendra1697@gmail.com'
+                }
+            ]
         }
     });
     res.send({ msg: "Create an Event at Google Calender" });

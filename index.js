@@ -13,6 +13,7 @@ const { validate } = require("./Middleware/validate.middleware");
 const { EventRouter } = require("./Routes/event.route");
 const { availableRouter } = require("./Routes/availability.route");
 const { calenderIntegrationRoute } = require("./Routes/calenderIntegration.route");
+const { notificationRouter } = require("./Routes/notification.route");
 
 
 //Inbuilt middlewares;
@@ -27,10 +28,11 @@ app.get("/", async (req, res) => {
 
 //Fixed starting end points for making nested dynamic route;
 app.use('/users', userRouter);
-// app.use(validate); // use custom middleware
+app.use(validate); // use custom middleware
 app.use('/events', EventRouter);
 app.use('/availability', availableRouter);
 app.use('/', calenderIntegrationRoute);
+app.use('/notification', notificationRouter);
 
 //server code for start or live my server at defined port;
 httpServer.listen(PORT, async () => {
