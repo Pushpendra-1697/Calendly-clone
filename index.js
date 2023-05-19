@@ -28,7 +28,7 @@ app.get("/", async (req, res) => {
 
 //Fixed starting end points for making nested dynamic route;
 app.use('/users', userRouter);
-app.use(validate); // use custom middleware
+// app.use(validate); // use custom middleware
 app.use('/events', EventRouter);
 app.use('/availability', availableRouter);
 app.use('/', calenderIntegrationRoute);

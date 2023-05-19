@@ -19,8 +19,8 @@ notificationRouter.get('/', async (req, res) => {
             host: "smtp.ethereal.email",
             port: 587,
             auth: {
-                user: "emmitt.hudson@ethereal.email", // generated ethereal user
-                pass: "YtuPv7n128uBmhVxR5", // generated ethereal password
+                user: "pushpendra1697@gmail.com", // generated ethereal user
+                pass: "Push1697@", // generated ethereal password
             },
         });
 
