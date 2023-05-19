@@ -28,11 +28,12 @@ app.get("/", async (req, res) => {
 
 //Fixed starting end points for making nested dynamic route;
 app.use('/users', userRouter);
-// app.use(validate); // use custom middleware
-app.use('/events', EventRouter);
-app.use('/availability', availableRouter);
 app.use('/', calenderIntegrationRoute);
 app.use('/notification', notificationRouter);
+app.use(validate); // use custom middleware
+app.use('/events', EventRouter);
+app.use('/availability', availableRouter);
+
 
 //server code for start or live my server at defined port;
 httpServer.listen(PORT, async () => {
