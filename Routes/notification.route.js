@@ -16,11 +16,11 @@ notificationRouter.get('/', async (req, res) => {
     try {
         // connect with SMTP server
         let transporter = nodemailer.createTransport({
-            host: "smtp.ethereal.email",
+            host: "smtp.gmail.com",
             port: 587,
             auth: {
-                user: "pushpendra1697@gmail.com", // generated ethereal user
-                pass: "Push1697@", // generated ethereal password
+                user: process.env.ADMIN_GMAIL, // generated ethereal user
+                pass: process.env.ADMIN_PASSWORD, // generated ethereal password
             },
         });
 
