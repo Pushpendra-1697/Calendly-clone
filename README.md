@@ -6,7 +6,7 @@ The Calendly-like application will simplify the process of scheduling and managi
 node.js, express.js, mongoDB, and other npm packages like jsonwebtoken, bcrypt, dayjs, googleapis, nodemailer, uuid
 
 # Render Deploy Link
-
+https://calendly-r1a6.onrender.com/
 
 
 ## Installation
