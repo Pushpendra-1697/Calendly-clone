@@ -4,7 +4,15 @@ const { Schema, model } = require("mongoose");
 const userSchema = new Schema(
     {
         name: { type: String, required: true },
-        password: { type: String, required: true }
+        password: { type: String, required: true },
+
+        availability: [
+            {
+                start: { type: Date, required: true, default: Date.now },
+                end: { type: Date, required: true, default: Date.now },
+                isUnavailable: { type: Boolean, required: true, default: false }
+            }
+        ],
     },
     { versionKey: false, timestamps: true }
 );

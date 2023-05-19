@@ -13,13 +13,7 @@ const eventSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "user",
             required: true,
-        },
-
-        eventExpired: { type: Boolean, default: false },
-        requestToJoin: { type: Array, default: [] },
-        acceptedUser: { type: Array, default: [] },
-        rejectedUser: { type: Array, default: [] },
-        expiredUser: { type: Array, default: [] },
+        }
     },
     { versionKey: false, timestamps: true }
 );

@@ -20,4 +20,14 @@ EventRouter.post("/", async (req, res) => {
     }
 });
 
+// /events/get => Retrieving Events of particular adminid;
+EventRouter.get("/get", async (req, res) => {
+    try {
+        let events = await EventModel.find().populate('adminid');
+        res.status(200).send({ status: "OK", events });
+    } catch (err) {
+        res.status(404).send({ Error: err.message, status: "NO" });
+    }
+});
+
 module.exports = { EventRouter };

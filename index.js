@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3000; //defined port 8080 (default 3000) exclud
 const { userRouter } = require("./Routes/users.route");
 const { validate } = require("./Middleware/validate.middleware");
 const { EventRouter } = require("./Routes/event.route");
+const { availableRouter } = require("./Routes/availability.route");
+const { calenderIntegrationRoute } = require("./Routes/calenderIntegration.route");
 
 
 //Inbuilt middlewares;
@@ -27,6 +29,8 @@ app.get("/", async (req, res) => {
 app.use('/users', userRouter);
 // app.use(validate); // use custom middleware
 app.use('/events', EventRouter);
+app.use('/availability', availableRouter);
+app.use('/', calenderIntegrationRoute);
 
 //server code for start or live my server at defined port;
 httpServer.listen(PORT, async () => {
