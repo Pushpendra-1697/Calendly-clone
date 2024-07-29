@@ -61,7 +61,7 @@ calenderIntegrationRoute.get('/schedule_event', async (req, res) => {
             },
             attendees: [
                 {
-                    email: 'pushpendra1697@gmail.com'
+                    email: 'khushigupta02530@gmail.com'
                 }
             ]
         }
